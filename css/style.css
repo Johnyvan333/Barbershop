@@ -3,21 +3,306 @@ body {
   color: #000;
   font-size: 14px;
   font-weight: 700;
-  line-height: 1.7em;
+  line-height: 1.7em;  
 }
 
-h1.page-name,
+ /* выделение границ
+
+
+div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: green solid 1px}
+
+*/
+
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;  
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.main-header{ 
+  padding-top: 10px;  
+  background-color: #000;
+  color: #fff;
+}
+
+.main-navigation {
+  float: left;
+  width: 640px;
+  min-height: 72px;  
+}
+
+.main-navigation ul{
+  margin-left: -40px;
+}
+
+.main-navigation li {
+  display: inline-block;   
+}
+
+.user-block {
+  float: right;
+  width: 100px;
+  min-height: 72px;    
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 45px;
+  
+  background: #232323 url('../img/footer-bg.png')
+}
+
+.footer-contacts {
+  float: left;
+  margin-right: 80px;
+  width: 310px;  
+}
+
+.footer-social {
+  float: left;
+  width: 160px;  
+}
+
+.footer-copyright {
+  float: right;
+  width: 140px;
+}
+
+/* сетка index.html */
+
+.main-index {
+  background: #000 url('../img/bg.jpg') 50% 50% no-repeat;
+}
+
+.main-index .container {
+  padding-top: 57px;
+  padding-bottom: 63px;
+}
+
+.logo {
+  width: 368px;
+  min-height: 204px;
+  margin: 0 auto;  
+  margin-bottom: 30px;
+}
+
+.features-row {
+  margin-bottom: 84px;
+  
+  color: #fff;
+}
+
+.features-item {
+  float: left;
+  margin-right: 60px;
+  width: 270px;
+  min-height: 170px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+.index-content {
+  margin-bottom: 33px;
+  background: #fbf8f5 url('../img/bg1.png') repeat;
+}
+
+.index-content:last-child {
+  margin-bottom: 0;
+}
+
+.content-column-left {
+  float: left;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 60px;
+  width: 330px;
+  min-height: 330px;
+}
+
+.content-column-right {
+  float: right;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 80px;
+  min-height: 330px;
+  width: 330px;
+}
+
 h2.content-column-title {  
   font-size: 30px;
   font-weight: 700;
 }
 
-.manufacturer h2 {
-  font-size: 24px;
+
+/* сетка catalog.html */
+
+.main-catalog {
+  padding-top: 60px;
+  padding-bottom: 47px;
+  background: #fbf8f5 url('../img/bg1.png') repeat; 
+}
+
+h1.page-name {
+  text-align: left;
+  margin-bottom: 30px;  
+  font-size: 30px;
   font-weight: 700;
+}
+
+.breadcrumbs {
+  text-align: left;
+  margin-bottom: 60px;
+  margin-left: -40px;
+}
+
+.breadcrumbs li {
+  display: inline-block;  
+}
+
+.catalog-search {
+  float: left;
+  width: 170px;
+  min-height: 575px;
+  margin-top: -20px;
+  
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.catalog-search label {
+  display: block;
+  margin-bottom: 15px;
+  
+  font-size: 14px;  
+}
+
+.catalog-search manufacturer {
+  margin-bottom: 55px;
+} 
+
+.catalog-search h2 {
+  font-size: 24px;
+  font-weight: 700;  
+}
+
+.catalog-items {
+  float: right;
+  width: 720px;
+  min-height: 600px;
+  margin-right: -20px;
+  margin-bottom: 44px;
 }
 
 .catalog-items h1 {
   font-size: 14px;
   font-weight: 700; 
 }
+
+.item-common {
+  display: inline-block;
+  width: 220px;
+  min-height: 286px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  clear: both;
+  margin-left: 200px;  
+}
+
+.pagination li {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin-right: 7px;
+  
+  text-align: center;  
+  background: #000;
+}
+
+.pagination a {
+  color: #fff;  
+}
+
+.pagination .active {
+  background: #fff;
+  color: #000;
+}
+
+/* сетка catalog-item-bocalifornia1 */
+
+.images {
+  float: left;
+  width: 460px;
+  min-height: 670px;
+  text-align: center;
+}
+
+.images big-img {
+  margin-bottom: 20px;  
+}
+
+.small-img img{
+  margin-right: 16px;
+}
+
+.small-img img:last-child {
+  margin-right: 0;
+}
+
+.item-features {
+  float:right;
+  width: 390px;
+  min-height: 530px;
+}
+
+.item-info {
+  padding-top: 20px;
+  text-align: left;  
+}
+
+.item-info .techdata {
+  float: right;
+}
+
+.item-info p {
+  margin: 38px 0;
+}
+
+.btn-buy {
+  margin-bottom: 67px;
+}
+
+.btn-buy .price {
+  display:inline-block;
+  height: 43px;
+  width: 109px;
+  
+  background: #e5e5e5;
+}
+
+.btn-buy .button {
+  display: inline-block;
+  height: 43px;
+  width: 78px;
+  
+  background: #000;
+  color: #fff;
+  text-align: center;
+  margin-left: -4px;
+}
+
+.equipment p {
+  margin-bottom: 38px;
+}
+
+
