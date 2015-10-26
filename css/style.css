@@ -3,7 +3,9 @@ body {
   color: #000;
   font-size: 14px;
   font-weight: 700;
-  line-height: 1.7em;  
+  line-height: 1.7em;
+  
+  background-color: #000;
 }
 
  /* выделение границ
@@ -55,7 +57,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   padding-top: 60px;
   padding-bottom: 45px;
   
-  background: #232323 url('../img/footer-bg.png')
+  background: #232323 url('../img/footer-bg.png') repeat;
 }
 
 .footer-contacts {
@@ -136,7 +138,7 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   width: 330px;
 }
 
-h2.content-column-title {  
+.content-column-title {  
   font-size: 30px;
   font-weight: 700;
 }
@@ -150,7 +152,7 @@ h2.content-column-title {
   background: #fbf8f5 url('../img/bg1.png') repeat; 
 }
 
-h1.page-name {
+.page-name {
   text-align: left;
   margin-bottom: 30px;  
   font-size: 30px;
