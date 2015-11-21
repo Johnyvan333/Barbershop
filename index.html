@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп «Бородинский»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700,400&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -13,7 +15,7 @@
             <li class="active">Главная</li>
             <li><a href="#">Информация</a></li>
             <li><a href="#">Новости</a></li>
-            <li><a href="text.html">Прайс-лист</a></li>
+            <li><a href="#">Прайс-лист</a></li>
             <li><a href="catalog.html">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
@@ -36,7 +38,8 @@
         </div>
         <div class="features-item">
           <div class="features-title">Круто</div>
-          <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
+          <p>Забудьте, как вы стриглись раньше. 
+          <br>Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
         </div>
         <div class="features-item">
           <div class="features-title">Дорого</div>
@@ -61,9 +64,9 @@
         <section class="content-column-right">
           <h2 class="content-column-title">Фотогалерея</h2>
           <div class="gallery">
-            <figure class="gallery-content">
+            <div class="gallery-content">
               <img src="img/gallery1.jpg" width="286" height="164" alt="">
-            </figure>
+            </div>
             <button class="btn gallery-prev">Назад</button>
             <button class="btn gallery-next">Вперед</button>
           </div>
@@ -71,8 +74,8 @@
       </div>
       <div class="index-content clearfix">
         <section class="content-column-left">
-          <div class="main-contacts">
-            <h2 class="content-column-title">Контактная информация</h2>
+          <div class="index-contacts">
+            <h2 class="content-column-title column-title-wide">Контактная информация</h2>
             <p>
               Барбершоп «Бородинский»<br>
               Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
@@ -91,11 +94,11 @@
           <div class="appointment-form">
             <h2 class="content-column-title">Записаться</h2>
             <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-            <form action="/echo" method="post">
-              <input type="date" name="date" value="" placeholder="Дата">
-              <input type="time" name="time" value="" placeholder="Время">
-              <input type="text" name="name" value="" placeholder="Ваше имя">
-              <input type="tel" name="phone" value="" placeholder="Телефон">
+            <form class="clearfix" action="/echo" method="post">
+              <input type="date" name="date" placeholder="Дата">
+              <input type="time" name="time" placeholder="Время">
+              <input type="text" name="name" placeholder="Ваше имя">
+              <input type="tel" name="phone" placeholder="Телефон">
               <button type="submit" class="btn">Отправить</button>
             </form>
           </div>
@@ -114,12 +117,12 @@
         </section>
         <section class="footer-social">
           <p>Давайте дружить!</p>
-          <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
-          <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
-          <a href="#" class="social-btn social-btn-inst">Инстаграм</a>
+          <a href="#" class="social-btn social-btn-vk"></a>
+          <a href="#" class="social-btn social-btn-fb"></a>
+          <a href="#" class="social-btn social-btn-inst"></a>
         </section>
         <section class="footer-copyright">
-          <p>Дизайн сайта:</p>
+          <p>разработано:</p>
           <a href="#" class="btn">htmlacademy.ru</a>
         </section>
       </div>

@@ -1,22 +1,17 @@
 body {
-  font-family: PTSans, Arial, sans-serif;
+  min-width: 980px;
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
   color: #000;
   font-size: 14px;
-  font-weight: 700;
-  line-height: 1.7em;
+  font-weight: bold;  
   
   background-color: #000;
 }
 
- /* выделение границ
-
-
-div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: green solid 1px}
-
-*/
-
-
-.clearfix:after {
+ .clearfix:after {
   content: '';
   display: table;
   clear: both;  
@@ -25,66 +20,153 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
 .container {
   width: 940px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
-.main-header{ 
-  padding-top: 10px;  
+.btn {
+  display: inline-block;
+  min-width: 140px;
+  padding: 10px 0;
+  
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.7em;
+  text-align: center;
+  text-decoration: none;
+  
+  outline: none;
+  border: none;
+  
+  background: black;
+}
+
+/* header */
+
+.main-header{
+  margin: 0;
+  padding: 0;  
+  
   background-color: #000;
   color: #fff;
 }
 
 .main-navigation {
   float: left;
-  width: 640px;
-  min-height: 72px;  
+  min-width: 640px;    
 }
 
 .main-navigation ul{
-  margin-left: -40px;
+  font-size: 0;  
 }
 
 .main-navigation li {
   display: inline-block;   
 }
 
-.user-block {
-  float: right;
-  width: 100px;
-  min-height: 72px;    
+.user-block a,
+.main-navigation a {
+  display: block;
+  padding: 26px 21px;
+  
+  line-height: 1.2em;
+  text-align: center;
+  
+  color: white;  
+  font-size: 16px;  
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
+.user-block {
+  float: right;
+  margin: 0;
+  padding: 0;
+  min-width: 100px;
+}
+
+/* footer */
+
 .main-footer {
-  padding-top: 60px;
+  padding-top: 55px;
   padding-bottom: 45px;
   
+  color: white;
   background: #232323 url('../img/footer-bg.png') repeat;
 }
 
 .footer-contacts {
   float: left;
-  margin-right: 80px;
-  width: 310px;  
+  margin-right: 70px;
+  width: 320px;
+  line-height: 1.7em;
+  
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.footer-contacts a {
+  color: white;
 }
 
 .footer-social {
   float: left;
-  width: 160px;  
+  width: 140px; 
+  
+  font-size: 0;  
+}
+
+.footer-copyright p,
+.footer-social p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  line-height: 1.7em;
+  
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer-social .social-btn {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  margin-right: 6px;
+  
+  background: black;
+}
+
+.social-btn:last-of-type {
+  margin-right: 0;
 }
 
 .footer-copyright {
   float: right;
-  width: 140px;
+  width: 140px;  
+}
+
+.footer-copyright a {
+  display: block;
+  width: auto;
+  
+  line-height: 42px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+  background: black;
 }
 
 /* сетка index.html */
 
 .main-index {
-  background: #000 url('../img/bg.jpg') 50% 50% no-repeat;
-}
-
-.main-index .container {
-  padding-top: 57px;
+  padding-top: 50px;
   padding-bottom: 63px;
+  
+  text-transform: uppercase;
+  background: #000 url('../img/bg.jpg') 50% 50% no-repeat;
 }
 
 .logo {
@@ -94,16 +176,16 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   margin-bottom: 30px;
 }
 
-.features-row {
-  margin-bottom: 84px;
+.features-row {  
+  margin-bottom: 77px;
   
   color: #fff;
 }
 
 .features-item {
   float: left;
-  margin-right: 60px;
-  width: 270px;
+  margin-right: 20px;
+  width: 300px;
   min-height: 170px;
 }
 
@@ -111,38 +193,130 @@ div, label, ul, li, p, h1, h2, h3, h4, h5, span, article, section {outline: gree
   margin-right: 0;
 }
 
+.features-title {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.features-item p {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1.7em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .index-content {
+  margin: 0;
   margin-bottom: 33px;
+  padding: 55px 80px;
+  padding-top: 40px;
   background: #fbf8f5 url('../img/bg1.png') repeat;
 }
 
-.index-content:last-child {
+.index-content:last-of-type {
   margin-bottom: 0;
 }
 
 .content-column-left {
   float: left;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 60px;
-  width: 330px;
+  width: 300px;
   min-height: 330px;
 }
 
 .content-column-right {
   float: right;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-right: 80px;
   min-height: 330px;
-  width: 330px;
+  width: 300px;
 }
 
 .content-column-title {  
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  
   font-size: 30px;
-  font-weight: 700;
+  line-height: 1.2em;
 }
 
+.news-preview {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.7em;
+}
+
+.news-preview li {
+  margin-bottom: 30px;
+}
+
+.news-preview time {
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.content-column-right .gallery-content {
+  width: 300px;
+  height: 178px;
+  margin-bottom: 37px;
+}
+
+.content-column-right img {
+  border: 7px solid white;
+}
+
+.content-column-right .gallery-next {
+  float: right;
+}
+
+.column-title-wide {
+  width: 330px;
+  margin-bottom: 10px;
+}
+
+.index-contacts p,
+.appointment-form p {
+  padding: 10px 0;
+  line-height: 1.7em;
+  margin-bottom: 10px;
+}
+
+.index-contacts p:last-of-type {
+  margin-bottom: 35px;
+}
+
+.index-contacts a:last-of-type {
+  float: right;
+}
+
+.appointment-form input {
+  width: 121px;  
+  margin-bottom: 19px;
+  padding: 7px 0;
+  padding-left: 15px; 
+    
+  color: black;
+  font-size: 14px;
+  line-height: 1.7em;
+  opacity: 1;
+  
+  background: #f9f6f3;
+  border: 2px solid black;
+}
+
+.appointment-form input:nth-of-type(2n+2) {
+  float: right;  
+}
+
+.appointment-form input:nth-of-type(2n+1) {
+  float: left;
+}
+
+.appointment-form button {
+  clear: both;
+  width: 100%;
+  margin-top: 20px;
+}
 
 /* сетка catalog.html */
 
