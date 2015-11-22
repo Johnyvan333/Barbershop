@@ -41,6 +41,11 @@ body {
   background: black;
 }
 
+.btn:hover {
+  background: white;
+  color: black;
+}
+
 /* header */
 
 .main-header{
@@ -53,10 +58,14 @@ body {
 
 .main-navigation {
   float: left;
+  margin: 0;
+  padding: 0;
   min-width: 640px;    
 }
 
 .main-navigation ul{
+  margin: 0;
+  padding: 0;
   font-size: 0;  
 }
 
@@ -64,9 +73,11 @@ body {
   display: inline-block;   
 }
 
+.main-header .active,
 .user-block a,
 .main-navigation a {
   display: block;
+  position: relative;
   padding: 26px 21px;
   
   line-height: 1.2em;
@@ -78,11 +89,46 @@ body {
   text-transform: uppercase;
 }
 
+.main-navigation a:hover {
+  background: #242424;
+}
+
+.main-navigation span:after {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 4px;
+  bottom: 0;
+  left: 21px;
+  right: 21px;
+  
+  background: white;
+}
+
 .user-block {
   float: right;
   margin: 0;
   padding: 0;
-  min-width: 100px;
+  min-width: 100px;  
+}
+
+.sprite-login {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  margin-right: 15px;
+  width: 18px;
+  height: 16px;
+  background: url('../img/spritesheet.png') -99px -5px no-repeat;  
+}
+
+.user-block:hover {
+  background: #242424;
+}
+
+.user-block:hover .sprite-login {
+  background-position: -5px -5px;  
 }
 
 /* footer */
@@ -128,17 +174,66 @@ body {
   text-transform: uppercase;
 }
 
-.footer-social .social-btn {
+.social-btn {
   display: inline-block;
   width: 42px;
   height: 42px;
+  line-height: 42px;
+  
+  margin: 0;
   margin-right: 6px;
+  padding: 0;
+  
+  text-align: center;
   
   background: black;
 }
 
+.social-btn:hover {
+  background: white;
+}
+
 .social-btn:last-of-type {
   margin-right: 0;
+}
+
+.social-btn i {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  margin: 0;
+  padding: 0;
+  background: url(../img/spritesheet.png);
+}
+
+.social-btn .social-btn-vk {
+  width: 25px;
+  height: 16px;
+  background-position: -189px -5px;   
+}
+
+.social-btn:hover .social-btn-vk {
+  background-position: -224px -5px;
+}
+
+.social-btn .social-btn-fb {
+  width: 12px;
+  height: 22px;
+  background-position: -55px -5px;
+}
+
+.social-btn:hover .social-btn-fb {
+  background-position: -77px -5px;
+}
+
+.social-btn .social-btn-inst {
+  width: 21px;
+  height: 21px;
+  background-position: -127px -5px;
+}
+
+.social-btn:hover .social-btn-inst {
+  background-position: -158px -5px;
 }
 
 .footer-copyright {
@@ -150,13 +245,53 @@ body {
   display: block;
   width: auto;
   
-  line-height: 42px;
   text-align: center;
   color: white;
   text-transform: uppercase;
   text-decoration: none;
   
   background: black;
+}
+
+
+
+
+.breadcrumbs {
+  margin-bottom: 44px;
+  margin-left: -40px;
+  
+  font-size: 14px;
+  line-height: 1.7em;
+  text-align: left;   
+}
+
+.breadcrumbs li {
+  display: inline-block;  
+}
+
+.breadcrumbs a {
+  color: black;
+  text-decoration: none;
+}
+
+.breadcrumbs .active {
+  color: #aba9a7;
+}
+
+.breadcrumbs li:after {
+  display: inline-block;
+  margin: 2px 10px;
+  
+  content: '';
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  
+  background: black;
+}
+
+.breadcrumbs .active:after {
+  display: none;
 }
 
 /* сетка index.html */
@@ -198,6 +333,21 @@ body {
   text-align: center;
   text-transform: uppercase;
 }
+
+.features-title:after {
+  display: block;
+  content: '';
+  width: 15px;
+  height: 15px;
+  margin: 20px auto;
+  margin-bottom: 25px;
+  
+  transform: rotate(45deg);
+  
+  
+  background: white;
+}
+
 .features-item p {
   padding: 0 10px;
   font-size: 14px;
@@ -219,12 +369,27 @@ body {
 }
 
 .content-column-left {
+  position: relative;
   float: left;
   width: 300px;
   min-height: 330px;
 }
 
+.content-column-left:after {
+  position: absolute;
+  content: '';
+  left: 125%;
+  top: 10%;
+  
+  width: 8px;
+  height: 278px;
+  
+  
+  background: transparent url(../img/partition.png)
+}
+
 .content-column-right {
+  position: relative;
   float: right;
   min-height: 330px;
   width: 300px;
@@ -258,7 +423,7 @@ body {
 .content-column-right .gallery-content {
   width: 300px;
   height: 178px;
-  margin-bottom: 37px;
+  margin-bottom: 39px;
 }
 
 .content-column-right img {
@@ -312,93 +477,139 @@ body {
   float: left;
 }
 
+.appointment-form input:focus {
+  border-color: #663d15;
+  outline: none;
+}
+
 .appointment-form button {
   clear: both;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 /* сетка catalog.html */
 
 .main-catalog {
-  padding-top: 60px;
-  padding-bottom: 47px;
+  padding: 0;
+  padding-top: 57px;
+  padding-bottom: 45px;
+  
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
   background: #fbf8f5 url('../img/bg1.png') repeat; 
 }
 
 .page-name {
   text-align: left;
-  margin-bottom: 30px;  
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.breadcrumbs {
-  text-align: left;
-  margin-bottom: 60px;
-  margin-left: -40px;
-}
-
-.breadcrumbs li {
-  display: inline-block;  
+  margin-bottom: 16px;
+  line-height: 1.2em;
+  
+  font-size: 30px;  
 }
 
 .catalog-search {
   float: left;
   width: 170px;
-  min-height: 575px;
-  margin-top: -20px;
+  min-height: 575px;  
   
-  text-align: left;
-  text-transform: capitalize;
+  text-align: left;  
+}
+
+.catalog-search h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  line-height: 1.2em;
+  
+  font-size: 24px;  
+  font-weight: bold;  
 }
 
 .catalog-search label {
   display: block;
+  margin: 0;
   margin-bottom: 15px;
   
-  font-size: 14px;  
+  font-size: 14px;
+  line-height: 1.7em;
 }
 
-.catalog-search manufacturer {
-  margin-bottom: 55px;
+.catalog-search .manufacturer {
+  margin-bottom: 35px;
 } 
 
-.catalog-search h2 {
-  font-size: 24px;
-  font-weight: 700;  
+.catalog-search .item-group {
+  margin-bottom: 35px;
 }
 
 .catalog-items {
   float: right;
   width: 720px;
   min-height: 600px;
-  margin-right: -20px;
-  margin-bottom: 44px;
-}
-
-.catalog-items h1 {
-  font-size: 14px;
-  font-weight: 700; 
+  margin: 10px 0;  
+  margin-bottom: 23px;  
 }
 
 .item-common {
   display: inline-block;
   width: 220px;
   min-height: 286px;
+  margin: 0;
+  padding: 0;
   margin-right: 15px;
   margin-bottom: 20px;
+  
+  background: white;
+  box-shadow: 0 0 20px 0px #ccc;
+}
+
+.catalog-items img {
+  padding: 0;
+  margin: 0;
+}
+
+.catalog-items h1 {  
+  margin: 0 5px;
+  padding: 10px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.catalog-items a {
+  color: black;
+  text-decoration: none;
+}
+
+.catalog-items .item-manufacturer {
+  text-transform: uppercase;
+}
+
+.catalog-items .btn-buy {
+  margin: 0 15px;
+  margin-bottom: 15px;
+}
+
+.catalog-items .price {
+  line-height: 43px;
+  text-align: center;
+}
+
+.catalog-items .button {
+  line-height: 43px;
+  text-align: center;
 }
 
 .pagination {
   clear: both;
-  margin-left: 200px;  
+  padding: 0;
+  margin-left: 220px;  
 }
 
 .pagination li {
   display: inline-block;
-  width: 43px;
-  height: 43px;
   margin-right: 7px;
   
   text-align: center;  
@@ -406,10 +617,17 @@ body {
 }
 
 .pagination a {
-  color: #fff;  
+  display: block;
+  line-height: 43px;
+  width: 43px;
+  
+  color: #fff;
+  text-decoration: none;
 }
 
 .pagination .active {
+  line-height: 43px;
+  width: 43px;
   background: #fff;
   color: #000;
 }
@@ -418,20 +636,23 @@ body {
 
 .images {
   float: left;
-  width: 460px;
-  min-height: 670px;
+  width: 460px;  
   text-align: center;
 }
 
-.images big-img {
-  margin-bottom: 20px;  
+.images .big-img {
+  height: 500px;
+  padding: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px 0 #ccc;
 }
 
 .small-img img{
-  margin-right: 16px;
+  margin-right: 17px;
+  box-shadow: 0 0 20px 0 #ccc;
 }
 
-.small-img img:last-child {
+.small-img img:last-of-type {
   margin-right: 0;
 }
 
@@ -448,6 +669,7 @@ body {
 
 .item-info .techdata {
   float: right;
+  color: #aeaeae;
 }
 
 .item-info p {
@@ -455,30 +677,43 @@ body {
 }
 
 .btn-buy {
+  width: auto;
   margin-bottom: 67px;
+  font-size: 0;
 }
 
 .btn-buy .price {
   display:inline-block;
-  height: 43px;
+  line-height: 43px;
   width: 109px;
+  
+  font-size: 14px;
+  text-align: center;
   
   background: #e5e5e5;
 }
 
 .btn-buy .button {
   display: inline-block;
-  height: 43px;
   width: 78px;
+  line-height: 43px;
   
+  font-size: 14px;    
   background: #000;
   color: #fff;
-  text-align: center;
-  margin-left: -4px;
+  text-align: center;  
 }
 
 .equipment p {
   margin-bottom: 38px;
 }
 
+.equipment ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
+.equipment li {
+  line-height: 1.7em;
+}
