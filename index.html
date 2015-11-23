@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп «Бородинский»</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700,400&amp;subset=latin,cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700,400&amp;subset=latin,cyrillic" rel="stylesheet">    
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -86,7 +85,7 @@
               пн — пт: с 10:00 до 22:00<br>
               сб — вс: с 10:00 до 19:00
             </p>
-            <a href="#" class="btn">Как проехать</a>
+            <a href="#" class="footer-map btn">Как проехать</a>
             <a href="#" class="btn">Обратная связь</a>
           </div>
         </section>
@@ -112,7 +111,7 @@
         <section class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-          <a href="#">Как нас найти?</a><br>
+          <a class="footer-map" href="#">Как нас найти?</a><br>
           телефон: +7 (495) 666-02-66
         </section>
         <section class="footer-social">
@@ -127,5 +126,24 @@
         </section>
       </div>
     </footer>
+    <div class="modal_user-login">
+      <div class="modal-close">закрыть</div>
+      <h3>личный кабинет</h3>
+      <form action="#" method="post">
+        <span>введите пожалуйста свой логин и пароль</span>
+        <input type="text" id="modal-login" name="modal-login" placeholder="логин"><label for="modal-login"></label>
+        <input type="password" id="modal-password" name="modal-password" placeholder="пароль" ><label for="modal-password"></label>
+        <div class="modal-actions">
+          <input type="checkbox" id="modal-remember" name="modal-remember"><label for="modal-remember">запомните меня</label>
+          <a class="password-forget" href="#">я забыл пароль!</a>
+        </div>
+        <button class="btn" type="submit">войти</button>
+      </form>
+    </div>
+    <div class="modal-map">
+      <div class="modal-close">закрыть</div>      
+      <script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=mEmYEV9atse9WYW7hQtkdC7KF4ppmZ4N&width=770&height=550&lang=ru_RU&sourceType=constructor"></script>   
+    </div>
+    <script src="js/js.min.js"></script>
   </body>
 </html>
